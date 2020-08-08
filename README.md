@@ -20,6 +20,7 @@ services:
     restart: unless-stopped
     ports:
       - 6600:6600
+      #- 8000:8000 
     volumes:
       - ${PWD}/config:/config
       - ${HOME}/Music:/Music:ro
