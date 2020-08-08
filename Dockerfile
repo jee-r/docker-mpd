@@ -32,6 +32,6 @@ RUN set -x && \
 EXPOSE 8000 6600
 
 COPY mpd.conf /etc/mpd.conf
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
-COPY entrypoint.sh /
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
