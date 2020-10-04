@@ -6,7 +6,7 @@ LABEL name="docker-mpd" \
       org.label-schema.vcs-url="https://musicpd.org/"
 
 
-ENV CHROMAPRINT_VER=1.5.0
+ARG CHROMAPRINT_VER=1.5.0
 
 RUN set -x && \
     apk update && \
