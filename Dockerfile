@@ -1,7 +1,7 @@
 FROM alpine:3.11
 MAINTAINER Jee <jee@jeer.fr>
 
-ENV CHROMAPRINT_VER=1.4.3
+ENV CHROMAPRINT_VER=1.5.0
 
 RUN set -x && \
     apk update && \
