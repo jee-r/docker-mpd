@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.12
 MAINTAINER Jee <jee@jeer.fr>
 
 ENV CHROMAPRINT_VER=1.4.3
