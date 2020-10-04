@@ -1,10 +1,10 @@
 FROM alpine:3.11
+
 LABEL name="docker-mpd" \
       maintainer="Jee jee@jeer.fr" \
       description="Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music. Through plugins and libraries it can play a variety of sound files while being controlled by its network protocol." \
       url="https://musicpd.org" \
       org.label-schema.vcs-url="https://musicpd.org/"
-
 
 ARG CHROMAPRINT_VER=1.5.0
 
