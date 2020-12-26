@@ -1,5 +1,5 @@
 # docker-mpd
-[![Drone (cloud)](https://img.shields.io/drone/build/jee-r/docker-mpd?style=flat-square)](https://cloud.drone.io/jee-r/docker-mpd)
+[![Drone (self-hosted)](https://img.shields.io/drone/build/docker/mpd?server=https%3A%2F%2Fdrone.c0de.in&style=flat-square)](https://drone.c0de.in/docker/mpd)
 [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/j33r/mpd?style=flat-square)](https://microbadger.com/images/j33r/mpd)
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/j33r/mpd?style=flat-square)](https://microbadger.com/images/j33r/mpd)
 [![Docker Pulls](https://img.shields.io/docker/pulls/j33r/mpd?style=flat-square)](https://hub.docker.com/r/j33r/mpd)
