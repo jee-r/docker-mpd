@@ -7,8 +7,8 @@ LABEL name="docker-mpd" \
       org.label-schema.vcs-url="https://musicpd.org/"
 
 ARG CHROMAPRINT_VER=1.5.0
-
 RUN set -x && \
+    sed -i 's/http:\/\/dl-cdn.alpinelinux.org/https:\/\/mirrors.ircam.fr\/pub/' /etc/apk/repositories && \
     apk update && \
     apk upgrade && \
     apk add --no-cache \
