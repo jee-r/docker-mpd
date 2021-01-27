@@ -23,7 +23,7 @@ From [musicpd.org](https://www.musicpd.org):
 
 # How to use these images
 
-# do
+## Docker
 ```bash
 docker run \
     --detach \
@@ -38,6 +38,30 @@ docker run \
     --publish 6868:6868 \
     j33r/mpd:latest
 ```    
+
+## Docker Compose
+
+[`docker-compose`](https://docs.docker.com/compose/) can help with defining the `docker run` config in a repeatable way rather than ensuring you always pass the same CLI arguments.
+
+```
+version: '3'
+services:
+mpd:
+image: j33r/mpd:latest
+container_name: mpd
+user: "${UID:-1000}:${GID:-1000}"
+restart: unless-stopped
+environment:
+- HOME=/config
+- TZ=Europe/Paris
+volumes:
+- ${PWD}/config:/config
+- ${HOME}/Music:/Music:ro
+- /etc/localtime:/etc/localtime:ro
+ports:
+- 6600:6600
+- 6868:6868
+```
 
 ## Volumes
 
@@ -57,29 +81,6 @@ To change the timezone of the container set the `TZ` environment variable. The f
 
 You can also set the `HOME` environment variable this is usefull to get in the right directory when you attach a shell in your docker container.
 
-# Docker Compose
-
-[`docker-compose`](https://docs.docker.com/compose/) can help with defining the `docker run` config in a repeatable way rather than ensuring you always pass the same CLI arguments.
-
-```
-version: '3'
-services:
-  mpd:
-    image: j33r/mpd:latest
-    container_name: mpd
-    user: "${UID:-1000}:${GID:-1000}"
-    restart: unless-stopped
-    environment:
-      - HOME=/config
-      - TZ=Europe/Paris
-    volumes:
-      - ${PWD}/config:/config
-      - ${HOME}/Music:/Music:ro
-      - /etc/localtime:/etc/localtime:ro
-    ports:
-      - 6600:6600
-      - 6868:6868
-```
 
 # Contributions
 
