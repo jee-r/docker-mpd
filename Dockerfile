@@ -6,9 +6,11 @@ LABEL name="docker-mpd" \
       url="https://musicpd.org" \
       org.label-schema.vcs-url="https://musicpd.org/"
 
+COPY rootfs /
+
 ARG CHROMAPRINT_VER=1.5.0
+
 RUN set -x && \
-    sed -i 's/http:\/\/dl-cdn.alpinelinux.org/https:\/\/mirrors.ircam.fr\/pub/' /etc/apk/repositories && \
     apk update && \
     apk upgrade && \
     apk add --no-cache \
@@ -35,7 +37,5 @@ RUN set -x && \
 
 EXPOSE 8000 6600
 
-COPY mpd.conf /etc/mpd.conf
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
