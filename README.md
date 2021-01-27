@@ -65,7 +65,7 @@ ports:
 
 ## Volumes
 
-* `/config` directory containing your `.conf`, `.db`, `.log`, `.pid`, `.socket`, `.state` and `sticker.sql` files
+* `/config` directory containing your `.conf`, `.db`, `.log`, `.pid`, `.socket`, `.state` and `sticker.sql`. See [Doc](https://www.musicpd.org/doc/html/user.html#configuration) or/and default config file [mpd.conf](https://github.com/jee-r/docker-mpd/blob/master/rootfs/etc/mpd.conf) for more informations.
 * `/Music` directory containing your music (read-only). [Doc](https://www.musicpd.org/doc/html/user.html#configuring-the-music-directory)
 
 
