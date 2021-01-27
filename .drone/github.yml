@@ -1,4 +1,4 @@
-kind: pipeline                                                                                                                                                                                    
+kind: pipeline
 name: docker_build
 type: docker
 
@@ -12,7 +12,7 @@ steps:
 - name: build
   image: plugins/docker:latest
   settings:
-    repo: j33r/php-fpm
+    repo: j33r/mpd
     dockerfile: Dockerfile
     username: j33r
     password:
@@ -26,7 +26,7 @@ steps:
 
 ---
 
-kind: pipeline                                                                                                                                                                                    
+kind: pipeline
 name: test
 type: docker
 
@@ -34,7 +34,7 @@ steps:
 - name: test
   image: plugins/docker:latest
   settings:
-    repo: j33r/php-fpm
+    repo: j33r/mpd
     tags: latest
     dockerfile: Dockerfile
     username: j33r
@@ -47,7 +47,7 @@ steps:
 
 ---
 
-kind: pipeline                                                                                                                                                                                    
+kind: pipeline
 name: mirroring
 type: docker
 
@@ -60,7 +60,7 @@ steps:
     GIT_MIRROR_USER: jee
     GIT_MIRROR_TOKEN:
       from_secret: C0DEIN_TOKEN
-    GIT_MIRROR_REPO: git.c0de.in/docker/php-fpm.git
+    GIT_MIRROR_REPO: git.c0de.in/docker/mpd.git
   when:
     branch:
       - master
@@ -77,7 +77,7 @@ steps:
     GIT_MIRROR_USER: jee
     GIT_MIRROR_TOKEN:
       from_secret: FRAMAGIT_TOKEN
-    GIT_MIRROR_REPO: framagit.org/jee/docker-php-fpm.git
+    GIT_MIRROR_REPO: framagit.org/jee/docker-mpd.git
   when:
     branch:
       - master
@@ -85,4 +85,3 @@ steps:
     event:
       exclude:
         - pull_request
-
