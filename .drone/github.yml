@@ -24,6 +24,12 @@ steps:
       exclude:
         - pull_request
 
+trigger:
+  event:
+    - promote
+  target:
+    - build
+
 ---
 
 kind: pipeline
