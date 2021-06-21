@@ -32,6 +32,7 @@ RUN set -x && \
     apk add --no-cache \
       mpd \
       mpc && \
+    setcap -r /usr/bin/mpd && \
     rm -rf /tmp/* \
       /var/cache/apk/*
 
