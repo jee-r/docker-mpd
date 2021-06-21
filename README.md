@@ -13,7 +13,7 @@ A docker image for [**M**usic **P**layer **D**aemon](https://www.musicpd.org) ba
 | Tags | Alpine | MPD | Size | Layers |
 |-|-|-|-|-|
 | `latest`, `stable`, `master` | 3.11 | 0.21.16-r1 | ![](https://img.shields.io/docker/image-size/j33r/mpd/latest?style=flat-square) | ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/j33r/mpd/latest?style=flat-square) |
-| `dev` | 3.13 | 0.22.3-r0 | ![](https://img.shields.io/docker/image-size/j33r/dev/dev?style=flat-square) | ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/j33r/mpd/dev?style=flat-square) |
+| `dev` | 3.14 | 0.22.8-r2 | ![](https://img.shields.io/docker/image-size/j33r/dev/dev?style=flat-square) | ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/j33r/mpd/dev?style=flat-square) |
 
 # What is MPD?
 
