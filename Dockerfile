@@ -7,6 +7,7 @@ LABEL name="docker-mpd" \
       org.label-schema.vcs-url="https://musicpd.org/"
 
 COPY rootfs /
+ENV HOME=/config
 
 ARG CHROMAPRINT_VER=1.5.0
 
@@ -33,10 +34,8 @@ RUN set -x && \
       mpd \
       mpc && \
     setcap -r /usr/bin/mpd && \
-    rm -rf /tmp/* \
-      /var/cache/apk/*
+    rm -rf /tmp/* /var/cache/apk/*
 
 EXPOSE 8000 6600
-
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
