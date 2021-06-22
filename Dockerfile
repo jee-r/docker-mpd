@@ -34,6 +34,7 @@ RUN set -x && \
       mpd \
       mpc && \
     setcap -r /usr/bin/mpd && \
+    sed -e '/user\t\t\"mpd\"/ s/^#*/#/' -i /etc/mpd.conf && \
     rm -rf /tmp/* /var/cache/apk/*
 
 EXPOSE 8000 6600
