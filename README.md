@@ -3,7 +3,7 @@
 [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/j33r/mpd?style=flat-square)](https://microbadger.com/images/j33r/mpd)
 [![MicroBadger Layers](https://img.shields.io/microbadger/layers/j33r/mpd?style=flat-square)](https://microbadger.com/images/j33r/mpd)
 [![Docker Pulls](https://img.shields.io/docker/pulls/j33r/mpd?style=flat-square)](https://hub.docker.com/r/j33r/mpd)
-[![DockerHub](https://shields.io/badge/Dockerhub-j33r/php%E2%88%92fpm-%232496ED?logo=docker&style=flat-square)](https://hub.docker.com/r/j33r/mpd)
+[![DockerHub](https://shields.io/badge/Dockerhub-j33r/mpd-%232496ED?logo=docker&style=flat-square)](https://hub.docker.com/r/j33r/mpd)
 
 
 A docker image for [**M**usic **P**layer **D**aemon](https://www.musicpd.org) based on [Alpine Linux](https://alpinelinux.org) and **[without root process](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user)**
@@ -13,7 +13,7 @@ A docker image for [**M**usic **P**layer **D**aemon](https://www.musicpd.org) ba
 | Tags | Alpine | MPD | Size | Layers |
 |-|-|-|-|-|
 | `latest`, `stable`, `master` | 3.11 | 0.21.16-r1 | ![](https://img.shields.io/docker/image-size/j33r/mpd/latest?style=flat-square) | ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/j33r/mpd/latest?style=flat-square) |
-| `dev` | 3.14 | 0.22.8-r2 | ![](https://img.shields.io/docker/image-size/j33r/dev/dev?style=flat-square) | ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/j33r/mpd/dev?style=flat-square) |
+| `dev` | 3.14 | 0.22.8-r2 | ![](https://img.shields.io/docker/image-size/j33r/mpd/dev?style=flat-square) | ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/j33r/mpd/dev?style=flat-square) |
 
 # What is MPD?
 
