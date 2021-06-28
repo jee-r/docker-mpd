@@ -123,8 +123,8 @@ git push origin dev
 
 * And finaly [open a pull request](https://github.com/jee-r/docker-mpd/compare) comparing your dev branch with mine
 
-If you find a vulnerability please contact me by mail  
+If you find a vulnerability please contact me by mail.
 
 # License
 
-This project is under the [GNU Generic Public License v3](https://github.com/jee-r/docker-mpd/blob/master/LICENSE) to allow free use while ensuring it stays open.
+This project is under the [GNU Generic Public License v3](/LICENSE) to allow free use while ensuring it stays open.
