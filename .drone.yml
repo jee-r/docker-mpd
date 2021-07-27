@@ -8,6 +8,7 @@ steps:
   image: plugins/docker:latest
   settings:
     repo: j33r/mpd
+    mirror: https://mirror.gcr.io
     dockerfile: Dockerfile
     tags:
         - latest
@@ -27,6 +28,7 @@ steps:
   image: plugins/docker:latest
   settings:
     repo: j33r/mpd
+    mirror: https://mirror.gcr.io
     dockerfile: Dockerfile
     tags:
         - dev 
@@ -52,6 +54,7 @@ steps:
   image: plugins/docker:latest
   settings:
     repo: j33r/mpd
+    mirror: https://mirror.gcr.io
     tags: latest
     dockerfile: Dockerfile
     username: j33r
@@ -72,6 +75,7 @@ steps:
 - name: mirroring_c0de.in
   pull: always
   image: j33r/git-mirror:latest
+  mirror: https://mirror.gcr.io
   failure: ignore
   environment:
     GIT_MIRROR_USER: jee
@@ -86,12 +90,27 @@ steps:
 - name: mirroring_framagit
   pull: always
   image: j33r/git-mirror:latest
+  mirror: https://mirror.gcr.io
   failure: ignore
   environment:
     GIT_MIRROR_USER: jee
     GIT_MIRROR_TOKEN:
       from_secret: FRAMAGIT_TOKEN
     GIT_MIRROR_REPO: framagit.org/jee/docker-mpd.git
+  when:
+    event:
+      exclude:
+        - pull_request
+
+- name: mirroring_gitlab
+  pull: always
+  image: j33r/git-mirror:latest
+  failure: ignore
+  environment:
+    GIT_MIRROR_USER: jee-r
+    GIT_MIRROR_TOKEN:
+      from_secret: GITLAB_TOKEN
+    GIT_MIRROR_REPO: gitlab.com/jee-r/docker-mpd.git
   when:
     event:
       exclude:
