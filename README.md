@@ -1,7 +1,8 @@
 # docker-mpd
-[![Drone (cloud)](https://img.shields.io/drone/build/jee-r/docker-mpd?&style=flat-square)](https://cloud.drone.io/jee-r/docker-mpd)
+
+[![Drone (cloud) master build](https://img.shields.io/drone/build/jee-r/docker-mpd/master?label=master%20build&style=flat-square)](https://cloud.drone.io/jee-r/docker-mpd)
+[![Drone (cloud) dev build](https://img.shields.io/drone/build/jee-r/docker-mpd/dev?label=dev%20build&style=flat-square)](https://cloud.drone.io/jee-r/docker-mpd)
 [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/j33r/mpd?style=flat-square)](https://microbadger.com/images/j33r/mpd)
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/j33r/mpd?style=flat-square)](https://microbadger.com/images/j33r/mpd)
 [![Docker Pulls](https://img.shields.io/docker/pulls/j33r/mpd?style=flat-square)](https://hub.docker.com/r/j33r/mpd)
 [![DockerHub](https://shields.io/badge/Dockerhub-j33r/mpd-%232496ED?logo=docker&style=flat-square)](https://hub.docker.com/r/j33r/mpd)
 
@@ -12,8 +13,8 @@ A docker image for [**M**usic **P**layer **D**aemon](https://www.musicpd.org) ba
 
 | Tags | Alpine | MPD | Size | Layers |
 |-|-|-|-|-|
-| `latest`, `stable`, `master` | 3.11 | 0.21.16-r1 | ![](https://img.shields.io/docker/image-size/j33r/mpd/latest?style=flat-square) | ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/j33r/mpd/latest?style=flat-square) |
-| `dev` | 3.14 | 0.22.8-r2 | ![](https://img.shields.io/docker/image-size/j33r/mpd/dev?style=flat-square) | ![MicroBadger Layers (tag)](https://img.shields.io/microbadger/layers/j33r/mpd/dev?style=flat-square) |
+| `latest`, `stable`, `master` | 3.11 | 0.21.16-r1 | ![](https://img.shields.io/docker/image-size/j33r/mpd/latest?style=flat-square) |
+| `dev` | 3.14 | 0.22.8-r2 | ![](https://img.shields.io/docker/image-size/j33r/mpd/dev?style=flat-square) |
 
 # What is MPD?
 
