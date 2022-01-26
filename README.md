@@ -1,26 +1,28 @@
 # docker-mpd
 
-[![Drone (cloud) master build](https://img.shields.io/drone/build/jee-r/docker-mpd/master?label=master%20build&style=flat-square)](https://cloud.drone.io/jee-r/docker-mpd)
-[![Drone (cloud) dev build](https://img.shields.io/drone/build/jee-r/docker-mpd/dev?label=dev%20build&style=flat-square)](https://cloud.drone.io/jee-r/docker-mpd)
 [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/j33r/mpd?style=flat-square)](https://microbadger.com/images/j33r/mpd)
 [![Docker Pulls](https://img.shields.io/docker/pulls/j33r/mpd?style=flat-square)](https://hub.docker.com/r/j33r/mpd)
-[![DockerHub](https://shields.io/badge/Dockerhub-j33r/mpd-%232496ED?logo=docker&style=flat-square)](https://hub.docker.com/r/j33r/mpd)
-
+[![DockerHub](https://img.shields.io/badge/Dockerhub-j33r/mpd-%232496ED?logo=docker&style=flat-square)](https://hub.docker.com/r/j33r/mpd)
+[![ghcr.io](https://img.shields.io/badge/ghrc%2Eio-jee%2D-r/mpd-%232496ED?logo=github&style=flat-square)](https://ghcr.io/jee-r/mpd)
 
 A docker image for [**M**usic **P**layer **D**aemon](https://www.musicpd.org) based on [Alpine Linux](https://alpinelinux.org) and **[without root process](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user)**
 
 # Supported tags
 
-| Tags | Alpine | MPD | Size | Layers |
-|-|-|-|-|-|
-| `latest`, `stable`, `master` | 3.11 | 0.21.16-r1 | ![](https://img.shields.io/docker/image-size/j33r/mpd/latest?style=flat-square) |
-| `dev` | 3.14 | 0.22.8-r2 | ![](https://img.shields.io/docker/image-size/j33r/mpd/dev?style=flat-square) |
+| Tags | Size | Platforms | Build |
+|-|-|-|-|
+| `latest`, `master` | ![](https://img.shields.io/docker/image-size/j33r/mpd/latest?style=flat-square) | `amd64` | ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/jee-r/docker-mpd/Deploy/master?style=flat-square) 
+| `dev` | ![](https://img.shields.io/docker/image-size/j33r/mpd/dev?style=flat-square)  | `amd64`| ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/jee-r/docker-mpd/Deploy/dev?style=flat-square)
 
 # What is MPD?
 
 From [musicpd.org](https://www.musicpd.org):
 
 > Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music. Through plugins and libraries it can play a variety of sound files while being controlled by its network protocol.
+
+- Source Code : https://github.com/MusicPlayerDaemon/MPD
+- Documentation : https://mpd.readthedocs.io/en/latest/ 
+- Official Website : https://musicpd.org/
 
 # How to use these images
 
@@ -37,7 +39,7 @@ docker run \
     --volume /etc/localtime:/etc/localtime:ro \
     --publish 6600:6600 \
     --publish 6868:6868 \
-    j33r/mpd:latest
+    ghcr.io/jee-r/mpd:latest
 ```    
 
 ## Docker Compose
@@ -47,21 +49,21 @@ docker run \
 ```
 version: '3'
 services:
-mpd:
-image: j33r/mpd:latest
-container_name: mpd
-user: "${UID:-1000}:${GID:-1000}"
-restart: unless-stopped
-environment:
-- HOME=/config
-- TZ=Europe/Paris
-volumes:
-- ${PWD}/config:/config
-- ${HOME}/Music:/Music:ro
-- /etc/localtime:/etc/localtime:ro
-ports:
-- 6600:6600
-- 6868:6868
+    mpd:
+        image: j33r/mpd:latest
+        container_name: mpd
+        user: "${UID:-1000}:${GID:-1000}"
+        restart: unless-stopped
+        environment:
+            - HOME=/config
+            - TZ=Europe/Paris
+        volumes:
+            - ${PWD}/config:/config
+            - ${HOME}/Music:/Music:ro
+            - /etc/localtime:/etc/localtime:ro
+        ports:
+            - 6600:6600
+            - 6868:6868
 ```
 
 ## Volumes
