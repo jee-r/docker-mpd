@@ -1,10 +1,14 @@
-FROM alpine:3.11
+FROM alpine:3.15
 
 LABEL name="docker-mpd" \
       maintainer="Jee jee@jeer.fr" \
       description="Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music. Through plugins and libraries it can play a variety of sound files while being controlled by its network protocol." \
       url="https://musicpd.org" \
-      org.label-schema.vcs-url="https://musicpd.org/"
+      org.label-schema.vcs-url="https://github.com/jee-r/docker-mpd" \
+      org.opencontainers.image.source="https://github.com/jee-r/docker-mpd"
+
+COPY rootfs /
+ENV HOME=/config
 
 ARG CHROMAPRINT_VER=1.5.0
 
@@ -30,12 +34,10 @@ RUN set -x && \
     apk add --no-cache \
       mpd \
       mpc && \
-    rm -rf /tmp/* \
-      /var/cache/apk/*
+    setcap -r /usr/bin/mpd && \
+    sed -e '/user\t\t\"mpd\"/ s/^#*/#/' -i /etc/mpd.conf && \
+    rm -rf /tmp/* /var/cache/apk/*
 
 EXPOSE 8000 6600
-
-COPY mpd.conf /etc/mpd.conf
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
