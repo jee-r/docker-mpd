@@ -11,7 +11,7 @@ COPY rootfs /
 ENV HOME=/config
 
 # renovate: datasource=github-releases depName=acoustid/chromaprint extractVersion=^v(?<version>.*)$
-ARG CHROMAPRINT_VER=1.5.0
+ARG CHROMAPRINT_VERSION=1.5.0
 
 RUN set -x && \
     apk update && \
@@ -23,9 +23,9 @@ RUN set -x && \
       shadow \
       binutils && \
     cd /tmp && \
-    wget https://github.com/acoustid/chromaprint/releases/download/v${CHROMAPRINT_VER}/chromaprint-fpcalc-${CHROMAPRINT_VER}-linux-x86_64.tar.gz && \
-    tar xvf chromaprint-fpcalc-$CHROMAPRINT_VER-linux-x86_64.tar.gz && \
-    mv chromaprint-fpcalc-$CHROMAPRINT_VER-linux-x86_64/fpcalc /usr/local/bin && \
+    wget https://github.com/acoustid/chromaprint/releases/download/v${CHROMAPRINT_VERSION}/chromaprint-fpcalc-${CHROMAPRINT_VERSION}-linux-x86_64.tar.gz && \
+    tar xvf chromaprint-fpcalc-$CHROMAPRINT_VERSION-linux-x86_64.tar.gz && \
+    mv chromaprint-fpcalc-$CHROMAPRINT_VERSION-linux-x86_64/fpcalc /usr/local/bin && \
     strip -s /usr/local/bin/fpcalc && \
     apk del --no-cache \
       wget \
