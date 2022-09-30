@@ -11,7 +11,7 @@ COPY rootfs /
 ENV HOME=/config
 
 # renovate: datasource=github-releases depName=acoustid/chromaprint extractVersion=^v(?<version>.*)$
-ARG CHROMAPRINT_VERSION=1.5.0
+ARG CHROMAPRINT_VERSION=1.5.1
 
 RUN set -x && \
     apk update && \
