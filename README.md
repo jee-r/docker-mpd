@@ -11,7 +11,7 @@ A docker image for [**M**usic **P**layer **D**aemon](https://www.musicpd.org) ba
 
 | Tags | Size | Platforms | Build |
 |-|-|-|-|
-| `latest`, `master` | ![](https://img.shields.io/docker/image-size/j33r/mpd/latest?style=flat-square) | `amd64` | ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/jee-r/docker-mpd/Deploy/master?style=flat-square) 
+| `latest`, `main` | ![](https://img.shields.io/docker/image-size/j33r/mpd/latest?style=flat-square) | `amd64` | ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/jee-r/docker-mpd/Deploy/master?style=flat-square) 
 | `dev` | ![](https://img.shields.io/docker/image-size/j33r/mpd/dev?style=flat-square)  | `amd64`| ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/jee-r/docker-mpd/Deploy/dev?style=flat-square)
 
 # What is MPD?
