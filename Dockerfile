@@ -10,6 +10,7 @@ LABEL name="docker-mpd" \
 COPY rootfs /
 ENV HOME=/config
 
+# renovate: datasource=github-releases depName=acoustid/chromaprint extractVersion=^v(?<version>.*)$
 ARG CHROMAPRINT_VER=1.5.0
 
 RUN set -x && \
