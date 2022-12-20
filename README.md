@@ -1,6 +1,7 @@
 # docker-mpd
 
 [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/j33r/mpd?style=flat-square)](https://microbadger.com/images/j33r/mpd)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/jee-r/docker-mpd/deploy.yaml?branch=main&style=flat-square)
 [![Docker Pulls](https://img.shields.io/docker/pulls/j33r/mpd?style=flat-square)](https://hub.docker.com/r/j33r/mpd)
 [![DockerHub](https://img.shields.io/badge/Dockerhub-j33r/mpd-%232496ED?logo=docker&style=flat-square)](https://hub.docker.com/r/j33r/mpd)
 [![ghcr.io](https://img.shields.io/badge/ghrc%2Eio-jee%2D-r/mpd-%232496ED?logo=github&style=flat-square)](https://ghcr.io/jee-r/mpd)
