@@ -35,7 +35,6 @@ RUN set -x && \
     apk add --no-cache \
       mpd \
       mpc && \
-    setcap -r /usr/bin/mpd && \
     sed -e '/user\t\t\"mpd\"/ s/^#*/#/' -i /etc/mpd.conf && \
     rm -rf /tmp/* /var/cache/apk/*
 
