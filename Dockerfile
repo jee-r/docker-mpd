@@ -1,4 +1,4 @@
-FROM alpine:3.20
+FROM alpine:3.23
 
 LABEL name="docker-mpd" \
       maintainer="Jee jee@jeer.fr" \
